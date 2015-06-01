@@ -1,0 +1,26 @@
+<div ng-controller="MainCtrl as controller">
+  <h1>Image Selection Tool</h1>
+  <div class="row">
+    <span class="col-md-2" ng-repeat="image in controller.filteredImages">
+      <img ng-src="{{image.images.fixed_height_small.url}}"
+           class="img-thumbnail img-selection"
+           ng-class="{'img-selected': controller.isSelected('{{image.id}}')}"
+           alt="{{image.id}}"
+           ng-click="controller.toggle('{{image.id}}')" />
+    </span>
+  </div>
+
+  <div class="row row-centered">
+    <pagination class="col-centered"
+                total-items="controller.totalImages"
+                items-per-page="controller.imagesPerPage" 
+                ng-model="controller.currentPage"
+                ng-change="controller.pageChanged()"></pagination>
+  </div>
+
+  <div class="row row-centered">
+    <button class="btn btn-primary">
+      Submit
+    </button>
+  </div>
+</div>

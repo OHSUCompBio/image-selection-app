@@ -1,0 +1,21 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.img-selected {
+  background-color: $brand-primary
+}
+
+.img-selection {
+  margin: 5px !important
+}
+
+.row-centered {
+  text-align:center;
+}
+
+.col-centered{
+  float: none;
+  margin: 0 auto;
+}
