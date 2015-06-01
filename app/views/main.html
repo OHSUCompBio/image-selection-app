@@ -1,12 +1,13 @@
 <div ng-controller="MainCtrl as controller">
   <h1>Image Selection Tool</h1>
+  {{ controller.params }}
   <div class="row">
     <span class="col-md-2" ng-repeat="image in controller.filteredImages">
       <img ng-src="{{image.images.fixed_height_small.url}}"
            class="img-thumbnail img-selection"
            ng-class="{'img-selected': controller.isSelected('{{image.id}}')}"
            alt="{{image.id}}"
-           ng-click="controller.toggle('{{image.id}}')" />
+           ng-click="controller.toggleImage('{{image.id}}')" />
     </span>
   </div>
 
@@ -19,7 +20,7 @@
   </div>
 
   <div class="row row-centered">
-    <button class="btn btn-primary">
+    <button class="btn btn-primary" ng-click="controller.submitWorkflow()">
       Submit
     </button>
   </div>
