@@ -2,12 +2,12 @@
 
 ###*
  # @ngdoc function
- # @name imageSelectorAppApp.controller:MainCtrl
+ # @name imageSelectorApp.controller:MainCtrl
  # @description
  # # MainCtrl
- # Controller of the imageSelectorAppApp
+ # Controller of the imageSelectorApp
 ###
-angular.module 'imageSelectorAppApp'
+angular.module 'imageSelectorApp'
   .controller 'MainCtrl', ['$http', '$scope', ($http, $scope) ->
 
     @selectedImages = {}

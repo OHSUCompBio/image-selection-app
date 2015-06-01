@@ -2,14 +2,14 @@
 
 ###*
  # @ngdoc overview
- # @name imageSelectorAppApp
+ # @name imageSelectorApp
  # @description
- # # imageSelectorAppApp
+ # # imageSelectorApp
  #
  # Main module of the application.
 ###
 angular
-  .module 'imageSelectorAppApp', [
+  .module 'imageSelectorApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
