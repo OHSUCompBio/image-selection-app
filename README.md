@@ -1,5 +1,7 @@
 # image-selector-app
 
+![demo-page](http://i.imgur.com/rW34JBA.png)
+
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.11.1.
 
