@@ -10,7 +10,6 @@
            ng-click="controller.toggleImage('{{image.id}}')" />
     </span>
   </div>
-
   <div class="row row-centered">
     <pagination class="col-centered"
                 total-items="controller.totalImages"
@@ -18,7 +17,6 @@
                 ng-model="controller.currentPage"
                 ng-change="controller.pageChanged()"></pagination>
   </div>
-
   <div class="row row-centered">
     <button class="btn btn-primary" ng-click="controller.submitWorkflow()">
       Submit
