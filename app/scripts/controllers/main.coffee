@@ -44,7 +44,7 @@ angular.module 'imageSelectorApp'
           @filteredImages = @images.slice(begin, end)
 
       .error (data) =>
-        console.log 'Unable to fetch images.json'
+        @errorMessage 'Unable to fetch images.json'
 
     # Submit the selected images to the workflow specified by "workflowName"
     @submitWorkflow = =>
@@ -87,7 +87,7 @@ angular.module 'imageSelectorApp'
           parameters: parameters
 
         workflow.invoke(payload).then (response) =>
-          @newWorkflow = response
+          @successMessage = "Workflow has been invoked. Please refresh your history!"
           
     return
 

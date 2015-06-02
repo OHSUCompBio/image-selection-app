@@ -1,6 +1,19 @@
 <div ng-controller="MainCtrl as controller">
+
+  <alert type="success" ng-if="controller.successMessage">
+    <strong>Success!</strong> {{controller.successMessage}}
+  </alert>
+
+  <alert type="danger" ng-if="controller.errorMessage">
+    <strong>Error!</strong> {{controller.errorMessage}}
+  </alert>
+
   <h1>Image Selection Tool</h1>
-  {{ controller.params }}
+  This tool demonstrates how images from a third-party service can be loaded into Galaxy.
+  The user has the ability to select images that they would like further processed.
+  In this example, when you click "Submit", the selected images will be processed in the
+  "Upload Images" workflow. After receiving notification that the workflow has been
+  invoked, refresh your history!.
   <div class="row">
     <span class="col-md-2" ng-repeat="image in controller.filteredImages">
       <img ng-src="{{image.images.fixed_height_small.url}}"
